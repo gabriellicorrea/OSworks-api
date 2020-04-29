@@ -18,6 +18,7 @@ public class OrdemServicoController {
 	@Autowired
 	private GestaoOrdemServicoService gestaoOrdemServico;
 	
+	
 	@PostMapping
 	@ResponseStatus(HttpStatus.CREATED)
 	public OrdemServico criar(@RequestBody OrdemServico ordemServico) {

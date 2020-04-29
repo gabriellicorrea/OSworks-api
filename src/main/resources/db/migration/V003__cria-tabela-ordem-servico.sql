@@ -6,8 +6,8 @@ create table ordem_servico (
     status varchar(20) not null,
     data_abertura datetime not null,
     data_finalizacao datetime,
-    
-    primary key (id)
+
+	primary key (id)
 );
 
 alter table ordem_servico add constraint fk_ordem_servico_cliente

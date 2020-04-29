@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
@@ -14,7 +15,7 @@ import javax.persistence.ManyToOne;
 public class OrdemServico {
 	
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id; 
 	
 	@ManyToOne
@@ -27,7 +28,7 @@ public class OrdemServico {
 	private StatusOrdemServico status;
 
 	private LocalDateTime dataAbertura;
-	private LocalDateTime dataFinalizada;
+	private LocalDateTime dataFinalizacao;
 	
 	public Long getId() {
 		return id;
@@ -66,10 +67,10 @@ public class OrdemServico {
 		this.dataAbertura = dataAbertura;
 	}
 	public LocalDateTime getDataFinalizada() {
-		return dataFinalizada;
+		return dataFinalizacao;
 	}
-	public void setDataFinalizada(LocalDateTime dataFinalizada) {
-		this.dataFinalizada = dataFinalizada;
+	public void setDataFinalizada(LocalDateTime dataFinalizacao) {
+		this.dataFinalizacao = dataFinalizacao;
 	}
 	@Override
 	public int hashCode() {

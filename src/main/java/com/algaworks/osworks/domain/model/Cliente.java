@@ -16,13 +16,13 @@ public class Cliente {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@Size(max = 60)
 	@NotBlank
+	@Size(max = 60)
 	private String nome;
 	
 	@NotBlank
-	@Size(max = 255)
 	@Email
+	@Size(max = 255)
 	private String email;
 	
 	@NotBlank
